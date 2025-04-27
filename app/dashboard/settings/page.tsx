@@ -1,12 +1,12 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import { useRouter } from "next/navigation"
-import Cookies from "js-cookie";
 import { PropagateLoader } from "react-spinners";
 import { useForm } from "react-hook-form";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import Cookies from "js-cookie";
 
 type Person = {
   full_name: string;
