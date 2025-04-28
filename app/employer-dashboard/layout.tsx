@@ -1,6 +1,6 @@
 import { Suspense } from "react";
-import SideNav from "../ui/member-dashboard/sidenav";
 import Loading from "./loading";
+import SideNav from "../ui/employer-dashboard/sidenav";
  
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
