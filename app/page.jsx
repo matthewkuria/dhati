@@ -111,6 +111,18 @@ export default function Login() {
               required
             />
           </div>
+            <div className="my-4">
+              <p className="">Login as:</p>
+                <select
+                  name="role"
+                  className="mt-1 p-2 border border-gray-300 w-full rounded focus:outline-none focus:border-indigo-500"
+                  required
+                >
+                  <option value="admin">Admin</option>
+                  <option value="employer">Employer</option>
+                  <option value="employee">Employee</option>
+                </select>
+          </div>
 
           <button
             type="submit"
