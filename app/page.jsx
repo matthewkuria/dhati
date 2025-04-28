@@ -11,6 +11,7 @@ export default function Login() {
   const { toast } = useToast();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [role, setRole] = useState('admin');
   const [error, setError] = useState('');
   const [success, setSuccess] = useState('');
   const [loading, setLoading] = useState(false)
@@ -19,7 +20,8 @@ export default function Login() {
   e.preventDefault();
 
   const email = e.target.email.value; // Assuming you have an input for email
-  const password = e.target.password.value; // Assuming you have an input for password
+    const password = e.target.password.value; // Assuming you have an input for password
+    const role = e.target.role.value; // Assuming you have an input for role
     setLoading(true)
     setError('')
   try {
@@ -31,6 +33,7 @@ export default function Login() {
       body: JSON.stringify({
         email: email,
         password: password,
+        role: role,
       }),
     });
 
@@ -47,10 +50,14 @@ export default function Login() {
       // Store tokens in cookies
       setCookie('access_token', data.access, { expires: 1, secure: true, sameSite: 'Strict' });
       setCookie('refresh_token', data.refresh, { expires: 7, secure: true, sameSite: 'Strict' });
-      //  const token = getCookie('access_token');
-      // // alert(token)
-      // Redirect based on user role
-      window.location.href = data.redirect_url; // Redirect to the appropriate dashboard
+     // Redirect based on user role
+      if (role === 'admin') {
+        window.location.href = '/dashboard';
+      } else if (role === 'employer') {
+        window.location.href = '/employer-dashboard';
+      } else if (role === 'employee') {
+        window.location.href = '/member-dashboard';
+      }
     } else {      
        toast({
         variant: "destructive",
@@ -115,6 +122,9 @@ export default function Login() {
               <p className="">Login as:</p>
                 <select
                   name="role"
+                  value={role}
+                  defaultValue="admin"
+                  onChange={(e) => setRole(e.target.value)}
                   className="mt-1 p-2 border border-gray-300 w-full rounded focus:outline-none focus:border-indigo-500"
                   required
                 >
