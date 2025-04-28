@@ -109,7 +109,7 @@ export default function Signup() {
 
           <button
             type="submit"
-            className="w-full bg-indigo-600 text-white p-2 rounded hover:bg-indigo-700"
+            className="w-full bg-blue-500 text-white p-2 rounded hover:bg-quaternary"
           >
             {loading ? "Signing up..." : "Sign up" }
           </button>

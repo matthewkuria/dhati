@@ -126,12 +126,12 @@ export default function Login() {
 
           <button
             type="submit"
-            className="w-full bg-blue-800 text-white p-2 rounded hover:bg-blue-700"
+            className="w-full bg-blue-500 text-white p-2 rounded hover:bg-quaternary"
           >
             Login
           </button>
             <div className='mt-4 flex justify-end'>
-            <Link href="signup" className="">Not a member?<span className='text-blue-900 font-semibold hover:underline border-2 border-slate-200 px-1'>Join Now</span></Link>
+            <Link href="signup" className="">Not a member?<span className='text-secondary font-semibold hover:underline border-2 border-slate-200 px-1'>Join Now</span></Link>
           </div>
         </form>
       </div>
