@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react';
 import api from "../../utils/api"
 export default function EmployerDashboard() {
-  const [schedules, setSchedules] = useState([]);
+  const [schedules, setSchedules] = useState<any[]>([]);
   const [coverage, setCoverage] = useState(0);
   const [payroll, setPayroll] = useState([]);
   const [overtime, setOvertime] = useState([]);

@@ -5,7 +5,7 @@ import api from "../../utils/api"
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip } from 'recharts';
 
 export default function AdminDashboard() {
-  const [clockIns, setClockIns] = useState([]);
+  const [clockIns, setClockIns] = useState<{ id: string; employee_id: string; clock_in: string; is_late?: boolean; approved?: boolean }[]>([]);
   const [branches, setBranches] = useState([]);
   const [selectedBranch, setSelectedBranch] = useState('');
 

@@ -5,7 +5,7 @@ import api from "../../utils/api"
 
 export default function EmployeeDashboard() {
   const [schedules, setSchedules] = useState([]);
-  const [leaves, setLeaves] = useState([]);
+  const [leaves, setLeaves] = useState<any[]>([]);
   const [clockStatus, setClockStatus] = useState('Clock In');
 
   useEffect(() => {
@@ -40,7 +40,7 @@ export default function EmployeeDashboard() {
     e.preventDefault();
     const form = e.target as HTMLFormElement;
     const data = {
-      target: form.target.value,
+      target: (form.elements.namedItem('target') as HTMLInputElement).value,
       schedule: form.schedule.value,
     };
     const res = await api.post('/employee/shift-swap/', data);
