@@ -6,6 +6,7 @@ import clsx from 'clsx';
 import {
   UserCircleIcon,
   HomeIcon,
+  ArrowLeftOnRectangleIcon
  
 } from '@heroicons/react/24/outline';
 
@@ -17,6 +18,11 @@ const links = [
     name: 'My Details',
     href: '/employer-dashboard/my-details',
     icon: UserCircleIcon,
+  },
+  {
+    name: 'Logout',
+    href: '/logout',
+    icon: ArrowLeftOnRectangleIcon,
   },
   
   ];

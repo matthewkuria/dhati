@@ -39,7 +39,7 @@ export default function AdminDashboard() {
 
   return (
     <div className="p-6">
-      <h1 className="text-2xl mb-4">Admin Dashboard</h1>
+      <h1 className="text-3xl mb-4 font-bold">Admin Dashboard</h1>
       <select
         onChange={(e) => setSelectedBranch(e.target.value)}
         className="mb-4 p-2 border rounded"
@@ -66,6 +66,9 @@ export default function AdminDashboard() {
               {clock.id} - {clock.clock_in}
               {!clock.is_late && !clock.approved && (
                 <span className="text-red-500 font-bold">Late</span>
+              )}
+              {!clock.is_late && clock.approved && (
+                <span className="text-green-500 font-bold">On Time</span>
               )}
               {!clock.is_late && !clock.approved && (
                 <button

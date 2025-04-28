@@ -38,7 +38,7 @@ export default function EmployerDashboard() {
 
   return (
     <div className="p-6">
-      <h1 className="text-2xl mb-4">Employer Dashboard</h1>
+      <h1 className="text-3xl mb-4 font-bold">Employer Dashboard</h1>
       <form onSubmit={createSchedule} className="mb-4 p-4 bg-gray-100 rounded shadow-md space-y-4">
         <div className="flex flex-col">
           <label htmlFor="employee" className="mb-1 font-medium">Employee ID</label>
