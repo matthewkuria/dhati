@@ -16,6 +16,7 @@ export default function EmployerDashboard() {
       const overtimeRes = await api.get('/employer/overtime/');
       setSchedules(scheduleRes.data);
       setCoverage(coverageRes.data.coverage);
+      console.log(coverageRes.data.coverage);
       setPayroll(payrollRes.data);
       setOvertime(overtimeRes.data.overtime_employees);
     };
@@ -38,12 +39,47 @@ export default function EmployerDashboard() {
   return (
     <div className="p-6">
       <h1 className="text-2xl mb-4">Employer Dashboard</h1>
-      <form onSubmit={createSchedule} className="mb-4">
-        <input name="employee" placeholder="Employee ID" className="p-2 border rounded" />
-        <input name="branch" placeholder="Branch ID" className="p-2 border rounded" />
-        <input name="start_time" type="datetime-local" className="p-2 border rounded" />
-        <input name="end_time" type="datetime-local" className="p-2 border rounded" />
-        <button type="submit" className="bg-blue-500 text-white p-2 rounded">
+      <form onSubmit={createSchedule} className="mb-4 p-4 bg-gray-100 rounded shadow-md space-y-4">
+        <div className="flex flex-col">
+          <label htmlFor="employee" className="mb-1 font-medium">Employee ID</label>
+          <input
+        id="employee"
+        name="employee"
+        placeholder="Enter Employee ID"
+        className="p-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
+          />
+        </div>
+        <div className="flex flex-col">
+          <label htmlFor="branch" className="mb-1 font-medium">Branch ID</label>
+          <input
+        id="branch"
+        name="branch"
+        placeholder="Enter Branch ID"
+        className="p-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
+          />
+        </div>
+        <div className="flex flex-col">
+          <label htmlFor="start_time" className="mb-1 font-medium">Start Time</label>
+          <input
+        id="start_time"
+        name="start_time"
+        type="datetime-local"
+        className="p-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
+          />
+        </div>
+        <div className="flex flex-col">
+          <label htmlFor="end_time" className="mb-1 font-medium">End Time</label>
+          <input
+        id="end_time"
+        name="end_time"
+        type="datetime-local"
+        className="p-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
+          />
+        </div>
+        <button
+          type="submit"
+          className="w-full bg-blue-500 text-white p-2 rounded hover:bg-blue-600 transition-colors"
+        >
           Create Schedule
         </button>
       </form>
