@@ -46,7 +46,7 @@ export default function EmployerDashboard() {
         id="employee"
         name="employee"
         placeholder="Enter Employee ID"
-        className="p-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
+        className="p-2 border rounded focus:outline-none focus:ring-2 focus:ring-quaternary"
           />
         </div>
         <div className="flex flex-col">
@@ -55,7 +55,7 @@ export default function EmployerDashboard() {
         id="branch"
         name="branch"
         placeholder="Enter Branch ID"
-        className="p-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
+        className="p-2 border rounded focus:outline-none focus:ring-2 focus:ring-quaternary"
           />
         </div>
         <div className="flex flex-col">
@@ -64,7 +64,7 @@ export default function EmployerDashboard() {
         id="start_time"
         name="start_time"
         type="datetime-local"
-        className="p-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
+        className="p-2 border rounded focus:outline-none focus:ring-2 focus:ring-quaternary"
           />
         </div>
         <div className="flex flex-col">
@@ -73,12 +73,12 @@ export default function EmployerDashboard() {
         id="end_time"
         name="end_time"
         type="datetime-local"
-        className="p-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
+        className="p-2 border rounded focus:outline-none focus:ring-2 focus:ring-quaternary"
           />
         </div>
         <button
           type="submit"
-          className="w-full bg-blue-500 text-white p-2 rounded hover:bg-blue-600 transition-colors"
+          className="w-full bg-blue-500 text-white p-2 rounded hover:bg-quaternary transition-colors"
         >
           Create Schedule
         </button>

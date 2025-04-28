@@ -75,7 +75,7 @@ export default function EmployeeDashboard() {
         id="start_date"
         name="start_date"
         type="date"
-        className="p-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
+        className="p-2 border rounded focus:outline-none focus:ring-2 focus:ring-quaternary"
           />
         </div>
         <div className="flex flex-col">
@@ -86,7 +86,7 @@ export default function EmployeeDashboard() {
         id="end_date"
         name="end_date"
         type="date"
-        className="p-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
+        className="p-2 border rounded focus:outline-none focus:ring-2 focus:ring-quaternary"
           />
         </div>
         <div className="flex flex-col">
@@ -97,12 +97,12 @@ export default function EmployeeDashboard() {
         id="reason"
         name="reason"
         placeholder="Reason"
-        className="p-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
+        className="p-2 border rounded focus:outline-none focus:ring-2 focus:ring-quaternary"
           />
         </div>
         <button
           type="submit"
-          className="w-full bg-blue-500 text-white p-2 rounded hover:bg-blue-600 transition"
+          className="w-full bg-blue-500 text-white p-2 rounded hover:bg-quaternary transition"
         >
           Request Leave
         </button>
@@ -116,7 +116,7 @@ export default function EmployeeDashboard() {
         id="target"
         name="target"
         placeholder="Target Employee ID"
-        className="p-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
+        className="p-2 border rounded focus:outline-none focus:ring-2 focus:ring-quaternary"
           />
         </div>
         <div className="flex flex-col">
@@ -127,12 +127,12 @@ export default function EmployeeDashboard() {
         id="schedule"
         name="schedule"
         placeholder="Schedule ID"
-        className="p-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
+        className="p-2 border rounded focus:outline-none focus:ring-2 focus:ring-quaternary"
           />
         </div>
         <button
           type="submit"
-          className="w-full bg-blue-500 text-white p-2 rounded hover:bg-blue-600 transition"
+          className="w-full bg-blue-500 text-white p-2 rounded hover:bg-quaternary transition"
         >
           Request Swap
         </button>

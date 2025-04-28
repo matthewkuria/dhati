@@ -6,6 +6,7 @@ import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip } from 'recharts'
 
 export default function AdminDashboard() {
   const [clockIns, setClockIns] = useState<{ id: string; employee_id: string; clock_in: string; is_late?: boolean; approved?: boolean }[]>([]);
+  console.log(clockIns);
   const [branches, setBranches] = useState([]);
   const [selectedBranch, setSelectedBranch] = useState('');
 
@@ -58,15 +59,18 @@ export default function AdminDashboard() {
         <Line type="monotone" dataKey="employee_id" stroke="#8884d8" />
       </LineChart>
       <div>
-        <h2 className="text-xl mb-2">Clock-Ins/Outs</h2>
+        <h2 className="text-xl mb-2 uppercase font-bold text-quaternary">Clock-Ins/Outs</h2>
         <ul>
           {clockIns.map((clock: any) => (
-            <li key={clock.id} className="mb-2">
-              {clock.employee_id} - {clock.clock_in}
-              {clock.is_late && !clock.approved && (
+            <li key={clock.id} className="mb-4 p-4 bg-gray-100 rounded shadow-md flex justify-between items-center">
+              {clock.id} - {clock.clock_in}
+              {!clock.is_late && !clock.approved && (
+                <span className="text-red-500 font-bold">Late</span>
+              )}
+              {!clock.is_late && !clock.approved && (
                 <button
                   onClick={() => approveLate(clock.id)}
-                  className="ml-4 bg-green-500 text-white p-1 rounded"
+                  className="ml-4 bg-green-500 text-white p-1 rounded hover:bg-secondary transition-colors hover:text-quaternary"
                 >
                   Approve Late
                 </button>

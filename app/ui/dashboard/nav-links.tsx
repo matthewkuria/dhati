@@ -9,6 +9,7 @@ import {
   DocumentDuplicateIcon,
   BriefcaseIcon,
   WindowIcon,
+  ArrowRightOnRectangleIcon,
 } from '@heroicons/react/24/outline';
 
 // Map of links to display in the side navigation.
@@ -19,7 +20,7 @@ const links = [
   { name: 'Accounts', href: '/dashboard/groups', icon: UserGroupIcon  },
   { name: 'Attendances', href: '/dashboard/attendances', icon: BriefcaseIcon },
   { name: 'Events', href: '/dashboard/events', icon: WindowIcon },
-  { name: 'Reports', href: '/dashboard/reports', icon: DocumentDuplicateIcon },
+  { name: 'Logout', href: '/logout', icon: ArrowRightOnRectangleIcon },
 ];
 
 export default function NavLinks() {
