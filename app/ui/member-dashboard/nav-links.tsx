@@ -6,9 +6,8 @@ import clsx from 'clsx';
 import {
   UserCircleIcon,
   HomeIcon,
-  WindowIcon,
   BanknotesIcon,
-  UsersIcon,
+  ArrowLeftStartOnRectangleIcon
 } from '@heroicons/react/24/outline';
 
 // Map of links to display in the side navigation.
@@ -25,6 +24,12 @@ const links = [
     href: '/member-dashboard/my-schedules',
     icon: BanknotesIcon,
   },
+  {
+    name: 'Logout',
+    href: '/logout',
+    icon: ArrowLeftStartOnRectangleIcon,
+
+  }
   
   
 ];

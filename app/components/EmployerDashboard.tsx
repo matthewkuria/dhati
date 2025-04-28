@@ -34,6 +34,13 @@ export default function EmployerDashboard() {
     };
     const res = await api.post('/employer/schedule/', data);
     setSchedules((prev) => [...prev, res.data]);
+    if (res) {
+      alert('Schedule created successfully!');
+      form.reset(); // Clear the inputs after successful post 
+    } else {
+      alert('Failed to create schedule. Please try again.');
+    }
+    setSchedules((prev) => [...prev, res.data]);
   };
 
   return (

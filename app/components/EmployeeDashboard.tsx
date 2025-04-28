@@ -34,7 +34,15 @@ export default function EmployeeDashboard() {
       employee: 1, // Assuming employee ID is 1 for simplicity
     };
     console.log(data);
-    const res = await api.post('/employee/leave/', data);    
+    const res = await api.post('/employee/leave/', data);
+    setLeaves((prev) => [...prev, res.data]);
+    if (res) {
+      alert('Leave request sent successfully!');
+      form.reset(); // Clear the inputs after successful post 
+    }
+    else {
+      alert('Failed to send leave request. Please try again.');
+    }
     setLeaves((prev) => [...prev, res.data]);
   };
 
@@ -48,6 +56,14 @@ export default function EmployeeDashboard() {
     };
     console.log(data);
     const res = await api.post('/employee/shift-swap/', data);
+    if (res) {
+       alert('Swap request sent successfully!');
+       form.reset(); // Clear the inputs after successful post
+    }else {
+      alert('Failed to send swap request. Please try again.');
+    }
+    setLeaves((prev) => [...prev, res.data]);
+   
   };
 
   return (
@@ -56,13 +72,13 @@ export default function EmployeeDashboard() {
       <button onClick={handleClock} className="bg-blue-500 text-white p-2 rounded mb-4">
         {clockStatus}
       </button>
-      <div className="mb-4">
-        <h2 className="text-xl">My Schedule</h2>
-        <ul>
+      <div className="mb-4 bg-gray-100 p-4 rounded shadow">
+        <h2 className="text-xl font-semibold mb-2">My Schedule</h2>
+        <ul className="space-y-2">
           {schedules.map((schedule: any) => (
-            <li key={schedule.id}>
-              {schedule.start_time} - {schedule.end_time}
-            </li>
+        <li key={schedule.id} className="p-2 border rounded bg-white shadow-sm text-quaternary font-semibold">
+          <span className="font-medium">{schedule.start_time}</span> - <span className="font-medium">{schedule.end_time}</span>
+        </li>
           ))}
         </ul>
       </div>
