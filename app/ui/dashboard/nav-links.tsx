@@ -20,7 +20,7 @@ const links = [
  
   { name: 'Accounts', href: '/dashboard/accounts', icon: UserGroupIcon },
   { name: 'Taxes', href: '/dashboard/taxes', icon: CurrencyBangladeshiIcon },
-  { name: 'Clock In/Out', href: '/dashboard/clock-in-out', icon: WindowIcon },
+  { name: 'Clock In/Outs', href: '/dashboard/clock-in-out', icon: WindowIcon },
   { name: 'Settings', href: '/dashboard/settings', icon: CogIcon },
   { name: 'Logout', href: '/logout', icon: ArrowRightOnRectangleIcon },
 ];

@@ -1,19 +1,29 @@
 "use client";
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import api from '../../../utils/api'
 
 const page = () => {
     const [clockIns, setClockIns] = useState<{ id: string; employee_id: string; clock_in: string; is_late?: boolean; approved?: boolean }[]>([]);
     console.log(clockIns);
+    const [branches, setBranches] = useState([]);
+    const [selectedBranch, setSelectedBranch] = useState('');   
     
-     const approveLate = async (clockId: string) => {
+    const approveLate = async (clockId: string) => {
         await api.post('/admin/clock-ins/', { clock_id: clockId });
         setClockIns((prev) =>
           prev.map((item: any) =>
             item.id === clockId ? { ...item, approved: true } : item
           )
         );
+  };
+  useEffect(() => {
+      const fetchData = async () => {
+        const clockRes = await api.get(`/admin/clock-ins/?branch=${selectedBranch}`);
+        const branchRes = await api.get('/admin/branches/');
+        setClockIns(clockRes.data);
+        setBranches(branchRes.data);
       };
+      fetchData();})
   return (
       <div className="">
           <div>
