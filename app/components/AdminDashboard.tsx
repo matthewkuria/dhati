@@ -56,7 +56,7 @@ export default function AdminDashboard() {
         <XAxis dataKey="clock_in" />
         <YAxis />
         <Tooltip />
-        <Line type="monotone" dataKey="employee_id" stroke="#8884d8" />
+        <Line type="monotone" dataKey="employee" stroke="#8884d8" />
       </LineChart>
       <div>
         <h2 className="text-xl mb-2 uppercase font-bold text-quaternary">Clock-Ins/Outs</h2>
