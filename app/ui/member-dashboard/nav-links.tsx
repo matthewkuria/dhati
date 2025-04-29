@@ -7,7 +7,9 @@ import {
   UserCircleIcon,
   HomeIcon,
   BanknotesIcon,
-  ArrowLeftStartOnRectangleIcon
+  ArrowLeftStartOnRectangleIcon,
+  PhoneIcon,
+  BellIcon
 } from '@heroicons/react/24/outline';
 
 // Map of links to display in the side navigation.
@@ -23,6 +25,11 @@ const links = [
     name: 'My Schedules',
     href: '/member-dashboard/my-schedules',
     icon: BanknotesIcon,
+  },
+  {
+    name: 'Notifications',
+    href: '/member-dashboard/notifications',
+    icon: BellIcon,
   },
   {
     name: 'Logout',
