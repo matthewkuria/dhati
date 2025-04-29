@@ -6,8 +6,9 @@ import clsx from 'clsx';
 import {
   UserGroupIcon,
   HomeIcon,
-  DocumentDuplicateIcon,
   BriefcaseIcon,
+  CurrencyBangladeshiIcon,
+  CogIcon,
   WindowIcon,
   ArrowRightOnRectangleIcon,
 } from '@heroicons/react/24/outline';
@@ -17,9 +18,10 @@ import {
 const links = [
   { name: 'Home', href: '/dashboard', icon: HomeIcon },
  
-  { name: 'Accounts', href: '/dashboard/groups', icon: UserGroupIcon  },
-  { name: 'Attendances', href: '/dashboard/attendances', icon: BriefcaseIcon },
-  { name: 'Events', href: '/dashboard/events', icon: WindowIcon },
+  { name: 'Accounts', href: '/dashboard/accounts', icon: UserGroupIcon },
+  { name: 'Taxes', href: '/dashboard/taxes', icon: CurrencyBangladeshiIcon },
+  { name: 'Clock In/Out', href: '/dashboard/clock-in-out', icon: WindowIcon },
+  { name: 'Settings', href: '/dashboard/settings', icon: CogIcon },
   { name: 'Logout', href: '/logout', icon: ArrowRightOnRectangleIcon },
 ];
 

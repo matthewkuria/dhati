@@ -40,17 +40,20 @@ export default function AdminDashboard() {
   return (
     <div className="p-6">
       <h1 className="text-3xl mb-4 font-bold">Admin Dashboard</h1>
-      <select
-        onChange={(e) => setSelectedBranch(e.target.value)}
-        className="mb-4 p-2 border rounded"
-      >
-        <option value="">All Branches</option>
-        {branches.map((branch: any) => (
-          <option key={branch.id} value={branch.id}>
-            {branch.name}
-          </option>
-        ))}
-      </select>
+      <div className="mb-4">
+        <select
+          onChange={(e) => setSelectedBranch(e.target.value)}
+          className="p-2 border rounded"
+        >
+          <option value="">All Branches</option>
+          {branches.map((branch: any) => (
+        <option key={branch.id} value={branch.id}>
+          {branch.name}
+        </option>
+          ))}
+        </select>
+      </div>
+      
       <LineChart width={600} height={300} data={clockIns}>
         <CartesianGrid strokeDasharray="3 3" />
         <XAxis dataKey="clock_in" />
