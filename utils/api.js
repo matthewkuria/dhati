@@ -2,9 +2,10 @@ import axios from 'axios';
 import Cookie from 'js-cookie';
 
 const api = axios.create({
-  baseURL: 'http://localhost:8000/api',
+  baseURL: 'https://dhati-backend-f00g.onrender.com/api',
   headers: {
-    'Content-Type': 'application/json', 
+    'Content-Type': 'application/json',
+    
 
   },
 });
