@@ -80,7 +80,7 @@ export default function Login() {
      <ToastProvider>     
     <div className="min-h-screen flex items-center justify-center bg-gray-100">     
         <div className="bg-white p-8 rounded shadow-md w-96">
-          <Image src="/dhatiLogo.jpg" alt="NCCI-logo" width={200} height={200} className="mx-auto"/>
+          <Image src="/dhatiLogo.jpeg" alt="Dhati-logo" width={200} height={200} className="mx-auto"/>
           <h2 className="text-2xl font-bold mb-6 text-center">Login</h2>
           {loading && <ScaleLoader
                 color="hsla(217, 90%, 48%, 1)"
