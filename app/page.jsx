@@ -33,7 +33,6 @@ export default function Login() {
       body: JSON.stringify({
         email: email,
         password: password,
-        role: role,
       }),
     });
 
@@ -122,7 +121,6 @@ export default function Login() {
               <p className="">Login as:</p>
                 <select
                   name="role"
-                  value={role}
                   defaultValue="admin"
                   onChange={(e) => setRole(e.target.value)}
                   className="mt-1 p-2 border border-gray-300 w-full rounded focus:outline-none focus:border-indigo-500"
