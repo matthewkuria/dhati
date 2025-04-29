@@ -69,7 +69,7 @@ export default function EmployeeDashboard() {
   return (
     <div className="p-6">
       <h1 className="text-3xl mb-4 font-bold">Employee Dashboard</h1>
-      <button onClick={handleClock} className="bg-blue-500 text-white p-2 rounded mb-4">
+      <button onClick={handleClock} className="bg-blue-500 text-white p-2 rounded mb-4 hover:bg-quaternary transition">
         {clockStatus}
       </button>
       <div className="mb-4 bg-gray-100 p-4 rounded shadow">

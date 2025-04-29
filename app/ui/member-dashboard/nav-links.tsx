@@ -9,6 +9,7 @@ import {
   BanknotesIcon,
   ArrowLeftStartOnRectangleIcon,
   PhoneIcon,
+  
   BellIcon
 } from '@heroicons/react/24/outline';
 
@@ -22,8 +23,8 @@ const links = [
     icon: UserCircleIcon,
   },
   {
-    name: 'My Schedules',
-    href: '/member-dashboard/my-schedules',
+    name: 'My Taxes',
+    href: '/member-dashboard/taxes',
     icon: BanknotesIcon,
   },
   {
